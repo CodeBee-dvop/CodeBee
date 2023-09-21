@@ -3,22 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/stylecategoria.css">
+    <title>Tienda en Línea</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: "Open Sans", sans-serif;
+            margin: 0;
+        }
+
+        .navbar {
+            background-color: #1e3a5d;
+            padding: 10px;
+        }
+
+        .navbar input[type="text"] {
+            width: 200px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px 0 0 5px; 
+        }
+
+        .search-button {
+            background-image: url('https://icones.pro/wp-content/uploads/2021/06/icone-loupe-gris.png');
+            background-repeat: no-repeat;
+            background-size: 20px 20px;
+            background-position: center;
+            width: 40px; 
+            height: 40px; 
+            border: none;
+            border-radius: 0 5px 5px 0; 
+            cursor: pointer;
+        }
+
+        .navbar .nav-link {
+            color: #fff;
+            margin-right: 20px;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .product-card {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; 
+            padding: 20px;
+            text-align: left;
+        }
+
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px; 
+            cursor: pointer; 
+        }
+
+        .product-title {
+            font-weight: bold;
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            color: #ff6600;
+            margin: 10px 0;
+        }
+
+        .stock-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin: 10px 0;
+        }
+
+        .quantity-label {
+            font-size: 0.9rem;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .add-to-favorites {
+            background-color: #1e3a5d;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .add-to-cart {
+            background-color: #ff6600;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <div class="wrapper">
-      <div class="image">
+    <div class="navbar">
+        <input type="text" placeholder="Buscar más productos...">
+        <button class="search-button"></button>
+        <a href="#" class="nav-link">Menú Principal</a>
+        <a href="#" class="nav-link">Carrito</a>
+        <a href="#" class="nav-link">Historial de Compras</a>
+        <a href="#" class="nav-link">Categorías</a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="product-card">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_802342-MLA48644766760_122021-F.webp" alt="Producto 1" class="product-image" id="product-image">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="product-card">
+                    <h2 class="product-title">Laptop Lenovo IdeaPad 15ITL05 abyss blue 15.6"</h2>
+                    <p class="product-price">$99.99</p>
+                    <p class="stock-label">Stock disponible: 10 unidades</p>
+                    <label class="quantity-label">Cantidad:</label>
+                    <input type="number" min="1" max="10" value="1">
+                    <ul class="product-description">
+                      <h2 class="product-title">Descripción del producto:</h2>
+                      <li>Procesador Intel Core i3.</li>
+                      <li>Memoria RAM de 4GB.</li>
+                      <li>Pantalla LED de 15.6".</li>
+                      <li>Resolución de 1920x1080 px.</li>
+                      <li>Es antirreflejo.</li>
+                      <li>Tarjeta gráfica Intel UHD Graphics Xe G4 48EUs.</li>
+                      <li>Conexión wifi y bluetooth.</li>
+                      <li>Cuenta con 3 puertos USB y puerto HDMI.</li>
+                      <li>Incluye lector de tarjeta de memoria.</li>
+                      <li>Modo de sonido Stereo, HD Audio.</li>
+                      <li>La duración de la batería depende del uso que se le dé al producto.</li>
+                  </ul>
+                    <button class="add-to-favorites">Comprar ahora</button>
+                    <button class="add-to-cart">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-      </div>
-        <form action="#">
-          <h2>Categorías</h2>
-            <div class="input-field">
-            <input type="text" required>
-            <label>Ingrese una nueva categoria</label>
-          </div>
-          <button type="submit">Registrar</button>
-        </form>
-      </div>
+    <script>
+        let isImage1 = true;
+
+        const productImage = document.getElementById('product-image');
+
+        productImage.addEventListener('click', () => {
+            if (isImage1) {
+                productImage.src = 'https://http2.mlstatic.com/D_NQ_NP_2X_979177-MLA48644766758_122021-F.webp';
+            } else {
+                productImage.src = 'https://http2.mlstatic.com/D_NQ_NP_2X_802342-MLA48644766760_122021-F.webp';
+            }
+            
+            isImage1 = !isImage1;
+        });
+    </script>
 </body>
 </html>
