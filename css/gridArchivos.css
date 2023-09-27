@@ -1,0 +1,52 @@
+.search-form {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-form input[type="text"] {
+    padding: 10px;
+    width: 400px;
+    margin-right: 10px;
+}
+
+.search-form input[type="submit"],
+.search-form input[type="button"] {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    gap: 15px;
+}
+
+.search-form input[type="button"] {
+    background-color: #af4c4c;
+}
+
+.btn-modificar {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.btn-eliminar {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 2px;
+    cursor: pointer;
+}
