@@ -1,11 +1,18 @@
 /* Hero Section */
 .hero-section {
     height: 400px;
-    background-image: url("images/hero-img.jpg");
+    background-image: url("../recursos/imagenes/hero.png");
     background-position: center;
     background-size: cover;
 }
-
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.5); /* Negro con 50% de opacidad */
+}
 /* Shop Section */
 .shop-section {
     display: flex;

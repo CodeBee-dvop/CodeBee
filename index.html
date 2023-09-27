@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- Coding By CodingNepal - www.codingnepalweb.com -->
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +10,13 @@
 
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+
+<body style="  background: url(../recursos/imagenes/Fondo_Login.png) rgba(0, 0, 0, 0.722); background-position: center;
+background-size: cover;">
   <div class="wrapper">
     <form action="#">
       <h2>Inicio</h2>
-        <div class="input-field">
+      <div class="input-field">
         <input type="text" required>
         <label>Usuario</label>
       </div>
@@ -21,12 +24,19 @@
         <input type="password" required>
         <label>Contraseña</label>
       </div>
-      <button type="submit">Log In</button>
+      <button type="submit" onclick="go_to('Principal.html')">Log In</button>
       <div class="register">
-        <p>¿No tienes cuenta? <a href="#">Registrate</a></p>
+        <p>¿No tienes cuenta? <a href="registro.html">Registrate</a></p>
       </div>
     </form>
   </div>
+
+  <script>
+    function go_to(url) {
+      window.location.href = url;
+    }
+  </script>
 </body>
+
 </html>
 <!-- ghg -->
