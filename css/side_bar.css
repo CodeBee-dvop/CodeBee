@@ -391,3 +391,44 @@ header {
 .footer-items li a:hover {
     text-decoration: underline;
 }
+.background-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.7); 
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 1; 
+    border: 2px solid white; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+
+.large-text {
+    font-size: 36px;
+}
+
+.name-card {
+    background-color: rgba(255, 255, 255, 0.95); 
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px; 
+}
+
+.logo-card {
+    position: absolute;
+    top: 20%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 2;
+}
+
+.centered-image {
+    width: 200px; 
+    height: 200px;
+    object-fit: cover;
+}
+
+
